@@ -18,8 +18,8 @@
 .todosList li {
   margin: 1rem 0;
   padding: 1.5rem;
-  background-color: rgb(121, 26, 26);
-  border-radius: 6px;
+  background-color: rgba(137, 0, 157, 0.21);
+  border-radius: 1.5rem;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -29,17 +29,6 @@
 
 .todosList li div {
   display: flex;
-}
-
-.todosList button {
-  margin: 0 0.5rem;
-  border-color: white;
-}
-
-.todosList button:hover,
-.todosList button:active {
-  background-color: rgb(215, 56, 56);
-  border-color: white;
 }
 
 @media (min-width: 640px) {
