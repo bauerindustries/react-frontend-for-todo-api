@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import classes from './TodoManagement.module.css';
 
-function TodoManagement(props) {
+const TodoManagement = (props) => {
   const inputChangeHandler = (event) => {
     props.onUpdateTodoInput(event.target.value);
   };
@@ -32,6 +31,6 @@ function TodoManagement(props) {
       </form>
     </section>
   );
-}
+};
 
 export default TodoManagement;

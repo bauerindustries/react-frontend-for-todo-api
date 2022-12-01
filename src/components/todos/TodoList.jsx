@@ -2,7 +2,7 @@ import Todo from './Todo';
 
 import classes from './TodoList.module.css';
 
-function TodoList(props) {
+const TodoList = (props) => {
   const onEditTodoHandler = (todoId) => {
     props.onEditTodo(todoId);
   };
@@ -29,6 +29,6 @@ function TodoList(props) {
       </ul>
     </section>
   );
-}
+};
 
 export default TodoList;

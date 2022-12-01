@@ -8,7 +8,7 @@ import TodoLoading from './components/todos/TodoLoading';
 
 const TODO_API_URI = 'https://todos-rest-api-demo.onrender.com/todos/';
 
-function App() {
+const App = () => {
   const [placeholderText, setplaceholderText] = useState(
     'Add a new to-do item...'
   );
@@ -138,6 +138,6 @@ function App() {
       </Main>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,6 +1,6 @@
 import classes from './Header.module.css';
 
-function Header(props) {
+const Header = (props) => {
   return (
     <header>
       <h1>To-do Management</h1>
@@ -18,6 +18,6 @@ function Header(props) {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

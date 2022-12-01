@@ -1,6 +1,6 @@
-import classes from './Todo.module.css';
+import './Todo.module.css';
 
-function Todo(todo) {
+const Todo = (todo) => {
   const editTodoHandler = (event) => {
     event.preventDefault();
     const todoId = event.target.dataset.id;
@@ -34,6 +34,6 @@ function Todo(todo) {
       </div>
     </li>
   );
-}
+};
 
 export default Todo;
