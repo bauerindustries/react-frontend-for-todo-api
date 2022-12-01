@@ -1,0 +1,8 @@
+.todoManagement form {
+  width: 95%;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: rgb(91, 20, 20);
+}

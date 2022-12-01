@@ -1,0 +1,42 @@
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: rgb(176, 46, 46);
+  color: white;
+  border: 1px solid rgb(176, 46, 46);
+}
+
+button:hover,
+button:active {
+  background-color: rgb(215, 56, 56);
+  border-color: rgb(215, 56, 56);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+input {
+  font: inherit;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  background-color: rgb(253, 236, 236);
+}
+
+sub {
+  font-size: 1rem;
+  width: 95%;
+}

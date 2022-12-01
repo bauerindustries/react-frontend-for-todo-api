@@ -1,0 +1,11 @@
+.blink {
+  animation: blinker 3s linear infinite;
+  font-weight: bold;
+  display: block;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
