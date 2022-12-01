@@ -6,7 +6,7 @@ import TodoList from './components/todos/TodoList';
 import TodoManagement from './components/todos/TodoManagement';
 import TodoLoading from './components/todos/TodoLoading';
 
-const TODO_API_URI = 'https://todos-rest-api-demo.onrender.com/todos/';
+window.TODO_API_URI = 'https://todos-rest-api-demo.onrender.com/todos/';
 
 const App = () => {
   const [placeholderText, setplaceholderText] = useState(
@@ -21,7 +21,7 @@ const App = () => {
   useEffect(
     () => {
       setIsLoading(true);
-      fetch(TODO_API_URI)
+      fetch(window.TODO_API_URI)
         .then((response) => {
           return response.json();
         })
@@ -49,7 +49,7 @@ const App = () => {
     if (editTodoId) {
       // Update existing to-do
       try {
-        fetch(TODO_API_URI + editTodoId, {
+        fetch(window.TODO_API_URI + editTodoId, {
           method: 'PATCH',
           body: JSON.stringify({
             text: newTodo.text,
@@ -70,7 +70,7 @@ const App = () => {
     } else {
       // New To-do
       try {
-        fetch(TODO_API_URI, {
+        fetch(window.TODO_API_URI, {
           method: 'POST',
           body: JSON.stringify({
             text: newTodo.text,
@@ -106,7 +106,7 @@ const App = () => {
 
   const deleteTodoHandler = (deleteTodoId) => {
     try {
-      fetch(TODO_API_URI + deleteTodoId, {
+      fetch(window.TODO_API_URI + deleteTodoId, {
         method: 'DELETE',
       }).then((response) => {
         setLoadedTodos((prevTodos) => {
