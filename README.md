@@ -18,12 +18,12 @@ GUI input sends request methods and data to the [API](https://github.com/bauerin
 ## Hosting:
 You can see this front-end running [here](https://stately-pixie-6617d4.netlify.app) on Netlify.
 
-The API is running [here](https://todos-rest-api-demo.onrender.com/todos).
+The API is running [here](https://todos-rest-api-demo.onrender.com/todos/).
 
 The MongoDB database is hosted on MongoDB's Atlas Database.
 
 ## Requirements:
-* The app.js data() object variable todo_API_URI must be pointed to the URL of the API
+* The global variable window.TODO_API_URI must be the URL of the API
 
 ## The API:
 For more details on the workings of the API, please see the repository [Readme](https://github.com/bauerindustries/todos-rest-api).
