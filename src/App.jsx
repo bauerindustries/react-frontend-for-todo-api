@@ -84,7 +84,7 @@ const App = () => {
       }
 
       setLoadedTodos((prevTodos) => {
-        return [...prevTodos, newTodo];
+        return [newTodo, ...prevTodos];
       });
     }
     setEditTodoId(null);
