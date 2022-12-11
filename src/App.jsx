@@ -88,10 +88,6 @@ const App = () => {
       } catch {
         alert('Something went wrong!');
       }
-
-      setLoadedTodos((prevTodos) => {
-        return [newTodo, ...prevTodos];
-      });
     }
     setEditTodoId(null);
   };
