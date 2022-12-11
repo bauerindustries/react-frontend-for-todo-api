@@ -23,7 +23,7 @@ const TodoList = (props) => {
             onEditTodo={onEditTodoHandler}
             onDeleteTodo={onDeleteTodoHandler}
             key={todo.id}
-            props={todo}
+            todo={todo}
           />
         ))}
       </ul>

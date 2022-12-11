@@ -1,36 +1,29 @@
-import './Todo.module.css';
+import Button from '../UI/Button';
+import classes from './Todo.module.css';
 
-const Todo = (todo) => {
+const Todo = (props) => {
   const editTodoHandler = (event) => {
     event.preventDefault();
     const todoId = event.target.dataset.id;
-    todo.onEditTodo(todoId);
+    props.onEditTodo(todoId);
   };
 
   const deleteTodoHandler = (event) => {
     event.preventDefault();
     const todoId = event.target.dataset.id;
-    todo.onDeleteTodo(todoId);
+    props.onDeleteTodo(todoId);
   };
 
   return (
-    <li>
-      <p>{todo.props.text}</p>
+    <li className={classes.todosListItem}>
+      <p>{props.todo.text}</p>
       <div>
-        <button
-          type='button'
-          data-id={todo.props._id}
-          onClick={editTodoHandler}
-        >
+        <Button type={'button'} id={props.todo._id} onClick={editTodoHandler}>
           Edit
-        </button>
-        <button
-          type='button'
-          data-id={todo.props._id}
-          onClick={deleteTodoHandler}
-        >
+        </Button>
+        <Button type={'button'} id={props.todo._id} onClick={deleteTodoHandler}>
           Delete
-        </button>
+        </Button>
       </div>
     </li>
   );

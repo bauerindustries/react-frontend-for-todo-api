@@ -21,29 +21,33 @@ const App = () => {
   useEffect(
     () => {
       setIsLoading(true);
-      fetch(window.TODO_API_URI)
-        .then((response) => {
-          return response.json();
-        })
-        // .json() return a promise too, so...
-        .then((data) => {
-          const todos = [];
-          for (const key in data.todos) {
-            const todo = {
-              id: key,
-              ...data.todos[key],
-            };
-
-            todos.push(todo);
-          }
-
-          setIsLoading(false);
-          setLoadedTodos(todos);
-        });
+      fetchAllTodos();
     },
     // empty dependencies array means that useEffect will only run once
     []
   );
+
+  const fetchAllTodos = (e) => {
+    fetch(window.TODO_API_URI)
+      .then((response) => {
+        return response.json();
+      })
+      // .json() return a promise too, so...
+      .then((data) => {
+        const todos = [];
+        for (const key in data.todos) {
+          const todo = {
+            id: key,
+            ...data.todos[key],
+          };
+
+          todos.push(todo);
+        }
+
+        setIsLoading(false);
+        setLoadedTodos(todos);
+      });
+  };
 
   const saveTodoHandler = (newTodo) => {
     if (editTodoId) {
@@ -78,6 +82,8 @@ const App = () => {
           headers: {
             'Content-Type': 'application/json',
           },
+        }).then((data) => {
+          fetchAllTodos();
         });
       } catch {
         alert('Something went wrong!');

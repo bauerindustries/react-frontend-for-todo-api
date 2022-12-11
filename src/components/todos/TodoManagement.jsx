@@ -1,3 +1,4 @@
+import Button from '../UI/Button';
 import classes from './TodoManagement.module.css';
 
 const TodoManagement = (props) => {
@@ -27,7 +28,7 @@ const TodoManagement = (props) => {
           value={props.inputText}
           onChange={inputChangeHandler}
         />
-        <button type='submit'>{props.buttonLegend}</button>
+        <Button type={'submit'}>{props.buttonLegend}</Button>
       </form>
     </section>
   );

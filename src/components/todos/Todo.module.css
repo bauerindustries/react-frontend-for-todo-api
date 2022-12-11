@@ -1,10 +1,26 @@
-.todos {
-  margin: 2rem auto;
-  width: 95%;
-  max-width: 45rem;
-}
-
-.todos p {
+.todosListItem p {
   font-size: 1.5rem;
   line-height: 1.5rem;
+}
+
+.todosListItem {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background-color: rgba(137, 0, 157, 0.21);
+  border-radius: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todosListItem div {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .todosListItem {
+    flex-direction: row;
+  }
 }
