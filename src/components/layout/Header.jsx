@@ -8,7 +8,7 @@ const Header = (props) => {
         <h2>(Decoupled React front-end for Node.js/MongoDB REST API)</h2>
         <sub>
           For more details, see the Readme files in the{' '}
-          <a href='https://github.com/bauerindustries/vue-frontend-for-todo-api'>
+          <a href='https://github.com/bauerindustries/react-frontend-for-todo-api'>
             Front-end
           </a>{' '}
           and{' '}
